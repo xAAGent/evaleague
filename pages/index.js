@@ -78,7 +78,7 @@ export default function Leaderboard() {
   const [sortByWinPercentage, setSortByWinPercentage] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/leaderboard?season=${season}`)
+    axios.get(`https://king-prawn-app-b4hn4.ondigitalocean.app/leaderboard?season=${season}`)
       .then(response => setPlayers(response.data))
       .catch(error => console.error("Error fetching leaderboard:", error));
   }, [season]);
